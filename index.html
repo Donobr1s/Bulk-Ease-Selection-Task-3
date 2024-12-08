@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List with Filters</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>List of available products in our inventory</h1>
+  </header>
+  
+  <div class="filter-buttons">
+    <button onclick="filterProducts('ALL')">ALL</button>
+    <button onclick="filterProducts('Electronics')">ELECTRONICS</button>
+    <button onclick="filterProducts('Clothing')">CLOTHING</button>
+    <button onclick="filterProducts('Books')">BOOKS</button>
+    <button onclick="filterProducts('Stationery')">STATIONERY</button>
+    <button onclick="filterProducts('Kitchen Utensils')">KITCHEN UTENSILS</button>
+    <button onclick="filterProducts('Cosmetics')">COSMETICS</button>
+    <button onclick="filterProducts('Gym Equipment')">GYM EQUIPMENT</button>
+  </div>
+  
+  <div class="product-container" id="product-container">
+
+    <!-- Electronics -->
+    <div class="product-card" data-category="Electronics">
+      <h3>Smartphone</h3>
+      <p>&#8377;6999</p>
+    </div>
+
+    <div class="product-card" data-category="Electronics">
+      <h3>Laptop</h3>
+      <p>&#8377;49999</p>
+    </div>
+
+    <div class="product-card" data-category="Electronics">
+      <h3>Headphones</h3>
+      <p>&#8377;2999</p>
+    </div>
+    
+    <div class="product-card" data-category="Electronics">
+      <h3>Smartwatch</h3>
+      <p>&#8377;9999</p>
+    </div>
+
+    <div class="product-card" data-category="Electronics">
+      <h3>Camera</h3>
+      <p>&#8377;34999</p>
+    </div>
+
+    <div class="product-card" data-category="Electronics">
+      <h3>Bluetooth Speaker</h3>
+      <p>&#8377;1999</p>
+    </div>
+
+    <div class="product-card" data-category="Electronics">
+      <h3>Tablet</h3>
+      <p>&#8377;15999</p>
+    </div>
+
+    <!-- Clothing -->
+    <div class="product-card" data-category="Clothing">
+      <h3>T-shirt</h3>
+      <p>&#8377;499</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Jeans</h3>
+      <p>&#8377;1499</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Jacket</h3>
+      <p>&#8377;2999</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Dress</h3>
+      <p>&#8377;1999</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Footwear</h3>
+      <p>&#8377;999</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Scarf</h3>
+      <p>&#8377;399</p>
+    </div>
+
+    <div class="product-card" data-category="Clothing">
+      <h3>Hat</h3>
+      <p>&#8377;499</p>
+    </div>
+
+    <!-- Books -->
+    <div class="product-card" data-category="Books">
+      <h3>Notebook</h3>
+      <p>&#8377;99</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Novel</h3>
+      <p>&#8377;399</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Textbook</h3>
+      <p>&#8377;599</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Diary</h3>
+      <p>&#8377;299</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Art Book</h3>
+      <p>&#8377;499</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Dictionary</h3>
+      <p>&#8377;699</p>
+    </div>
+
+    <div class="product-card" data-category="Books">
+      <h3>Planner</h3>
+      <p>&#8377;299</p>
+    </div>
+
+    <!-- Stationery -->
+    <div class="product-card" data-category="Stationery">
+      <h3>Pen</h3>
+      <p>&#8377;20</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Pencil</h3>
+      <p>&#8377;15</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Notebook</h3>
+      <p>&#8377;100</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Ruler</h3>
+      <p>&#8377;50</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Eraser</h3>
+      <p>&#8377;10</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Marker</h3>
+      <p>&#8377;120</p>
+    </div>
+
+    <div class="product-card" data-category="Stationery">
+      <h3>Glue Stick</h3>
+      <p>&#8377;40</p>
+    </div>
+
+    <!-- Kitchen Utensils -->
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Cooking Pot</h3>
+      <p>&#8377;899</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Cutting Board</h3>
+      <p>&#8377;499</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Knife Set</h3>
+      <p>&#8377;699</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Blender</h3>
+      <p>&#8377;2999</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Toaster</h3>
+      <p>&#8377;1999</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Dish Rack</h3>
+      <p>&#8377;599</p>
+    </div>
+
+    <div class="product-card" data-category="Kitchen Utensils">
+      <h3>Measuring Cup</h3>
+      <p>&#8377;249</p>
+    </div>
+
+    <!-- Cosmetics -->
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Foundation</h3>
+        <p>&#8377;799</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Lipstick</h3>
+        <p>&#8377;299</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Eyeshadow Palette</h3>
+        <p>&#8377;499</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Skincare Cream</h3>
+        <p>&#8377;599</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Perfume</h3>
+        <p>&#8377;1299</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Face Wash</h3>
+        <p>&#8377;299</p>
+    </div>
+
+    <div class="product-card" data-category="Cosmetics">
+        <h3>Nail Polish</h3>
+        <p>&#8377;199</p>
+    </div>
+
+    <!-- Gym Equipment -->
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Dumbbell Set</h3>
+        <p>&#8377;2999</p>
+    </div>
+
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Treadmill</h3>
+        <p>&#8377;49999</p>
+    </div>
+
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Exercise Bike</h3>
+        <p>&#8377;29999</p>
+    </div>
+    
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Yoga Mat</h3>
+        <p>&#8377;499</p>
+    </div>
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Pull-Up Bar</h3>
+        <p>&#8377;1999</p>
+    </div>
+
+    <div class="product-card" data-category="Gym Equipment">
+        <h3>Resistance Bands</h3>
+        <p>&#8377;399</p>
+    </div>
+
+  </div>
+
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>
